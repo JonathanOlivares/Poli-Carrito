@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/LinearLayout_Base"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_Bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#62152D"
+                app:title="@string/activity_login_01"
+                app:titleTextColor="#FFFFFF"></androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#62152D"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!-- TITLE -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="cursive"
+                            android:text="Poli Carrito"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageUser"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:src="@drawable/ic_policarrito" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearLayout_01"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/LiLa_Datos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/TeVi_Datos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/activity_login_02"
+                                android:textAlignment="center"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/Lila_Datos02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/LiLa_Datos"
+                            android:orientation="vertical"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <EditText
+                                    android:id="@+id/emailEditText2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginRight="24dp"
+                                    android:autofillHints="@string/email"
+                                    android:background="@drawable/ic_field"
+                                    android:drawableStart="@drawable/ic_email"
+                                    android:drawablePadding="16dp"
+                                    android:ems="10"
+                                    android:hint="@string/email"
+                                    android:inputType="textEmailAddress"
+                                    android:padding="16dp" />
+
+                                <EditText
+                                    android:id="@+id/passwordEditText2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginRight="24dp"
+                                    android:autofillHints="@string/password"
+                                    android:background="@drawable/ic_field"
+                                    android:drawableStart="@drawable/ic_lock"
+                                    android:drawablePadding="16dp"
+                                    android:ems="10"
+                                    android:hint="@string/password"
+                                    android:inputType="textPassword"
+                                    android:padding="16dp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/Btn_Login"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:layout_marginTop="32dp"
+                                    android:background="@drawable/ic_buttom"
+                                    android:paddingLeft="64dp"
+                                    android:paddingRight="64dp"
+                                    android:text="@string/activity_login_03"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/LinearLayout_02"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:elevation="8dp"
+                    app:cardCornerRadius="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/LiLa_Signup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="10dp">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/Btn_Signup"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/ic_buttom_text"
+                                android:paddingLeft="64dp"
+                                android:paddingRight="64dp"
+                                android:text="@string/activity_login_04"
+                                android:textColor="#000000" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

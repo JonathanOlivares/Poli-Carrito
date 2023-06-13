@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044608548593",
+    "project_id": "smart-cart-41df4",
+    "storage_bucket": "smart-cart-41df4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044608548593:android:ae4e50bee8f344e9a2f350",
+        "android_client_info": {
+          "package_name": "com.myaplication.policarrito"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044608548593-bvke18dssk7m5dmjnor6jhrbdk5iaena.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3AQHv4L59StGFovYJjSiWEtttjcm27zM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044608548593-bvke18dssk7m5dmjnor6jhrbdk5iaena.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
