@@ -1,15 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/LinearLayout_Base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoriasFragment">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
+    <ScrollView
+        android:id="@+id/ScrollView_01"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Este es el Fragment de Categorias" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/RelativeLayout_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Titulo Departamentos -->
+            <LinearLayout
+                android:id="@+id/LinearLayout_01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="0dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Departamentos"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="32dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginEnd="60dp"
+                    android:src="@drawable/img_camera_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearLayout_01"
+                android:orientation="vertical"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout_Fila01"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:layout_below="@id/LinearLayout_02"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#62152D"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/TeVi_Frutas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Frutas"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:src="@drawable/img_manzana" />
+
+                            <Button
+                                android:id="@+id/Btn_Frutas"
+                                android:layout_width="136dp"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"
+                                android:text="Botón"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#F5EFD7"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/TeVi_Verduras"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Verduras (Proximamente)"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:src="@drawable/img_aguacate" />
+
+                            <Button
+                                android:id="@+id/Btn_Verdura"
+                                android:layout_width="136dp"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"
+                                android:text="Botón"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout_Fila02"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:layout_below="@id/LinearLayout_02"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#F5EFD7"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/TeVi_Panaderia"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Panaderia (Proximamente)"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:src="@drawable/img_panaderia" />
+
+                            <Button
+                                android:id="@+id/Btn_Panaderia"
+                                android:layout_width="136dp"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"
+                                android:text="Botón"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="135dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:backgroundTint="#F5EFD7"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/TeVi_Limpieza"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Limpieza (Proximamente)"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="16dp"
+                                android:src="@drawable/img_limpieza" />
+
+                            <Button
+                                android:id="@+id/Btn_Limpieza"
+                                android:layout_width="136dp"
+                                android:layout_height="225dp"
+                                android:layout_weight="1"
+                                android:text="Botón"
+                                android:visibility="invisible" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
