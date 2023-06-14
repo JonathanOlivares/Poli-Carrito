@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="#62152D"
-                app:title="@string/activity_login_01"
+                app:title="@string/activity_signup_01"
                 app:titleTextColor="#FFFFFF"></androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>

@@ -5,4 +5,8 @@
 
     <!-- Agregados Por El Equipo -->
     <color name="Politecnico">#62152D</color>
+
+    <color name="BottomNavigation_Item">#220006</color>
+    <color name="BottomNavigation_SelectedItem">#8C706D</color>
+
 </resources>

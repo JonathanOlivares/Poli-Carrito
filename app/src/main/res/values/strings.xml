@@ -6,7 +6,7 @@
     <string name="activity_login_03">Entrar</string>
     <string name="activity_login_04">¿Eres nuevo? Registrate !</string>
 
-    <string name="activity_signup_01">B I E N V E N I D O</string>
+    <string name="activity_signup_01">Poli Carrito</string>
     <string name="activity_signup_02">Registrate para continuar</string>
     <string name="activity_signup_03">R e g i s t r a r s e</string>
     <string name="activity_signup_04">¿Ya tienes una cuenta? Inicia Sesion !</string>
@@ -52,5 +52,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
