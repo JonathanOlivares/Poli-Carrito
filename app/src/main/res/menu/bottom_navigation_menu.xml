@@ -9,4 +9,12 @@
         android:id="@+id/categoriasFragment"
         android:icon="@drawable/ic_categorias_svg"
         android:title="Categorias" />
+    <item
+        android:id="@+id/carritoFragment"
+        android:icon="@drawable/ic_carrito_svg"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/cuentaFragment"
+        android:icon="@drawable/ic_perfil_usuario_svg"
+        android:title="Cuenta" />
 </menu>

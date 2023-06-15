@@ -24,15 +24,14 @@ class LoginActivity : AppCompatActivity() {
         // - Agregado - Initialize Firebase Auth
         auth = Firebase.auth
 
+        Check_LoginUser()
 
         /* - - - - - Agregado - Cambio a Signup - - - - - */
         val BotonRegistro: TextView = findViewById( R.id.Btn_Signup )
 
         BotonRegistro.setOnClickListener {
-            val win_singup = Intent( this, SingupActivity::class.java )
-            startActivity( win_singup )
+            CanbioActivity_Singup()
         }
-
 
         // - Agregado - Login
         val BotonLogin: TextView = findViewById( R.id.Btn_Login )
@@ -40,6 +39,20 @@ class LoginActivity : AppCompatActivity() {
             EjecutaLogin()
         }
 
+    }
+
+    /* - - - - - Agregado - Login Automatico - - - - - */
+    private fun Check_LoginUser() {
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
+        if (currentUser != null) {
+            // User is signed in
+            CanbioActivity_Menu()
+
+        } else {
+            // No user is signed in
+        }
     }
 
 
@@ -63,8 +76,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, navigate to the MainActivity
-                        val win_menu = Intent(this, MenuActivity::class.java)
-                        startActivity(win_menu)
+                        CanbioActivity_Menu()
 
                         Toast.makeText(
                             baseContext,
@@ -90,5 +102,16 @@ class LoginActivity : AppCompatActivity() {
                 }
 
         }
+    }
+
+    /* - - - - - Agregado - Funciones Basicas - - - - - */
+    private fun CanbioActivity_Singup() {
+        val win_singup = Intent( this, SingupActivity::class.java )
+        startActivity( win_singup )
+    }
+
+    private fun CanbioActivity_Menu() {
+        val win_menu = Intent(this, MenuActivity::class.java)
+        startActivity(win_menu)
     }
 }

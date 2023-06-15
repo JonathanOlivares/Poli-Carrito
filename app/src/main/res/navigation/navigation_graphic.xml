@@ -15,4 +15,14 @@
         android:name="com.myaplication.policarrito.CategoriasFragment"
         android:label="fragment_categorias"
         tools:layout="@layout/fragment_categorias" />
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="com.myaplication.policarrito.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito" />
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.myaplication.policarrito.CuentaFragment"
+        android:label="fragment_cuenta"
+        tools:layout="@layout/fragment_cuenta" />
 </navigation>
