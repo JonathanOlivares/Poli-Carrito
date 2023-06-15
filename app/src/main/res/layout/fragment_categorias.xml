@@ -117,7 +117,7 @@
                         android:layout_width="135dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:backgroundTint="#F5EFD7"
+                        android:backgroundTint="#FFFFFF"
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
@@ -168,7 +168,7 @@
                         android:layout_width="135dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:backgroundTint="#F5EFD7"
+                        android:backgroundTint="#FFFFFF"
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
@@ -209,7 +209,7 @@
                         android:layout_width="135dp"
                         android:layout_height="match_parent"
                         android:layout_margin="10dp"
-                        android:backgroundTint="#F5EFD7"
+                        android:backgroundTint="#FFFFFF"
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
