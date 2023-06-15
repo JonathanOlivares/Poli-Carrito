@@ -39,6 +39,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/Politecnico"
         app:titleTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_toolbar" />
 
