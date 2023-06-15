@@ -7,6 +7,6 @@
     <color name="Politecnico">#62152D</color>
 
     <color name="BottomNavigation_Item">#FFFFFF</color>
-    <color name="BottomNavigation_SelectedItem">#B40079</color>
+    <color name="BottomNavigation_SelectedItem">#000D2C</color>
 
 </resources>
