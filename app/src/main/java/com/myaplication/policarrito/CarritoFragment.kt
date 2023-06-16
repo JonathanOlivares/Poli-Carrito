@@ -57,10 +57,21 @@ class CarritoFragment : Fragment() {
 
         BotonPagar.setOnClickListener{
             activity?.let{
-                val win_login = Intent (it, PagosActivity::class.java)
-                it.startActivity(win_login)
+                //val win_login = Intent (it, PagosActivity::class.java)
+
+                val montoPago = view.findViewById<TextView>(R.id.TeVi_MontoPago).toString()
+
+                val intent = Intent(requireContext(), PagosActivity::class.java)
+
+                intent.putExtra("monto_pago", montoPago)
+                startActivity(intent)
+
+                //it.startActivity(win_login)
             }
         }
+
+
+
 
 
         return view
