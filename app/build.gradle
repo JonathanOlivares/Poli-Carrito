@@ -65,6 +65,6 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
 
 
-    /* - - - - - Agregado Por el Equipo - PayPal - - - - - */
-
+    /* - - - - - Agregado Por el Equipo - Mercado Pago - - - - - */
+    implementation 'com.mercadopago:sdk:2.5.4'
 }
