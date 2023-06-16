@@ -6,15 +6,6 @@ buildscript {
     repositories {
         google()  // Google's Maven repository
         mavenCentral()  // Maven Central repository
-        maven {
-            url  "https://cardinalcommerceprod.jfrog.io/artifactory/android"
-            credentials {
-                // Be sure to add these non-sensitive credentials in order to retrieve dependencies from
-                // the private repository.
-                username mavenUsername
-                password mavenPassword
-            }
-        }
     }
 
     dependencies {

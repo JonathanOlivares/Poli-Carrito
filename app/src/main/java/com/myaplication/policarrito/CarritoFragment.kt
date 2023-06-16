@@ -1,10 +1,15 @@
 package com.myaplication.policarrito
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,20 +26,46 @@ class CarritoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+    /* - - - - - Agregado - Informacion Correo - - - - - */
+    private lateinit var auth: FirebaseAuth
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+
+        // - Agregado - Initialize Firebase Auth
+        auth = Firebase.auth
+
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_carrito, container, false)
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?
+    ): View?
+    {
+        /* - - - - - Agregado - Informacion Correo - - - - - */
+        val view: View = inflater.inflate(R.layout.fragment_cuenta, container, false)
+
+        val BotonSignup = view.findViewById<TextView>(R.id.Btn_Logout)
+
+        BotonSignup.setOnClickListener{
+            auth.signOut()
+
+            activity?.let{
+                val win_login = Intent (it, LoginActivity::class.java)
+                it.startActivity(win_login)
+            }
+        }
+
+
+        return view
     }
 
     companion object {

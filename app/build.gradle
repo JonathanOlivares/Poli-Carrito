@@ -66,5 +66,5 @@ dependencies {
 
 
     /* - - - - - Agregado Por el Equipo - PayPal - - - - - */
-    implementation('com.paypal.checkout:android-sdk:0.112.2')
+
 }

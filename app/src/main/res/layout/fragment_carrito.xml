@@ -6,5 +6,16 @@
     tools:context=".CarritoFragment"
     android:background="@drawable/background_gradient3">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Btn_Logout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/ic_buttom"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp"
+        android:text="@string/fra_cuenta_Logout"
+        android:textColor="@color/white" />
+
 
 </FrameLayout>
