@@ -55,7 +55,7 @@
                     android:layout_margin="0dp"
                     android:backgroundTint="@color/Politecnico"
                     android:elevation="8dp"
-                    app:cardCornerRadius="15dp"
+                    app:cardCornerRadius="20dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -70,15 +70,16 @@
                         <ImageView
                             android:id="@+id/imageUser"
                             android:layout_width="wrap_content"
-                            android:layout_height="200dp"
-                            android:layout_gravity="center"
+                            android:layout_height="185dp"
+                            android:layout_gravity="top"
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/ic_promociondiadelpadre" />
+                            android:src="@drawable/img_promodiapadre" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-condensed-medium"
                             android:text="Promociones por día del padre"
                             android:textAlignment="center"
