@@ -42,11 +42,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <LinearLayout
                 android:id="@+id/LinearLayout_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -70,10 +73,12 @@
                             android:paddingEnd="10dp"
                             android:paddingBottom="20dp">
 
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
+
 
                                 <TextView
                                     android:id="@+id/TeVi_InformacionMontoPago"
@@ -96,6 +101,14 @@
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="300dp"
+                                    android:layout_height="300dp"
+                                    android:layout_marginStart="25dp"
+                                    android:layout_marginVertical="@dimen/cardview_default_radius"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/img_carritocom"/>
 
                             </LinearLayout>
                         </LinearLayout>
