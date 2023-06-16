@@ -51,11 +51,11 @@ class CarritoFragment : Fragment() {
     ): View?
     {
         /* - - - - - Agregado - Informacion Correo - - - - - */
-        val view: View = inflater.inflate(R.layout.fragment_cuenta, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_carrito, container, false)
 
-        val BotonSignup = view.findViewById<TextView>(R.id.Btn_Logout)
+        val BotonPagar = view.findViewById<TextView>(R.id.Btn_Logout02)
 
-        BotonSignup.setOnClickListener{
+        BotonPagar.setOnClickListener{
             activity?.let{
                 val win_login = Intent (it, PagosActivity::class.java)
                 it.startActivity(win_login)

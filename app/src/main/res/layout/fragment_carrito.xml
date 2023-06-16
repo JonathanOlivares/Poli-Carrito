@@ -59,32 +59,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <LinearLayout
-                            android:id="@+id/LiLa_Datos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingTop="10dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="30dp">
-
-                            <TextView
-                                android:id="@+id/TeVi_Datos"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/fra_cuenta_TituloDatos"
-                                android:textAlignment="center"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/Lila_Datos02"
+                            android:id="@+id/Lila_Carrito02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/LiLa_Datos"
                             android:orientation="vertical"
+                            android:paddingTop="10dp"
                             android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:paddingBottom="20dp">
@@ -142,7 +123,7 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            android:id="@+id/LiLa_Signup"
+                            android:id="@+id/LiLa_Pagar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -152,7 +133,7 @@
                             android:paddingBottom="20dp">
 
                             <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/Btn_Logout"
+                                android:id="@+id/Btn_Logout02"
                                 android:layout_width="match_parent"
                                 android:layout_height="48dp"
                                 android:layout_marginTop="0dp"
