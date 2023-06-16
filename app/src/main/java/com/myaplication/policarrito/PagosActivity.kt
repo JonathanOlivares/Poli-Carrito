@@ -22,9 +22,9 @@ class PagosActivity : AppCompatActivity() {
         configuration = PayPalConfiguration()
             .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
             .clientId(clientId)
-
-        //val edtAmount = findViewById<TextView>(R.id.TeVi_MontoPago)
-
+        /*
+        val edtAmount = findViewById<TextView>(R.id.TeVi_MontoPago)
+        */
 
     }
 }
