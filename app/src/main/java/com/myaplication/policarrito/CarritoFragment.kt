@@ -56,10 +56,8 @@ class CarritoFragment : Fragment() {
         val BotonSignup = view.findViewById<TextView>(R.id.Btn_Logout)
 
         BotonSignup.setOnClickListener{
-            auth.signOut()
-
             activity?.let{
-                val win_login = Intent (it, LoginActivity::class.java)
+                val win_login = Intent (it, PagosActivity::class.java)
                 it.startActivity(win_login)
             }
         }
