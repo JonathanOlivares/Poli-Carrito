@@ -50,12 +50,13 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="390dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="230dp"
                     android:layout_margin="0dp"
                     android:backgroundTint="@color/Politecnico"
                     android:elevation="8dp"
-                    app:cardCornerRadius="15dp">
+                    app:cardCornerRadius="15dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/bottomLayout"
@@ -81,6 +82,7 @@
                             android:fontFamily="sans-serif-condensed-medium"
                             android:text="Promociones por día del padre"
                             android:textAlignment="center"
+                            android:layout_gravity="center_vertical"
                             android:textColor="#FFFFFF"
                             android:textSize="15sp"
                             android:textStyle="bold"
