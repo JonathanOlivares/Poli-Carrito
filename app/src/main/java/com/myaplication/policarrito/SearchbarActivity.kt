@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.widget.SearchView
 import android.os.Bundle
-
+import android.view.Menu
+import android.view.MenuInflater
+import androidx.fragment.app.Fragment
 
 
 class SearchbarActivity : AppCompatActivity() {
@@ -16,6 +18,7 @@ class SearchbarActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
         val searchViewMenuItem = toolbar.menu.findItem(R.id.action_search)
         val searchView = searchViewMenuItem.actionView as SearchView
@@ -31,4 +34,5 @@ class SearchbarActivity : AppCompatActivity() {
             }
         })
     }
+
 }
