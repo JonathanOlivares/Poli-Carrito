@@ -4,6 +4,9 @@ plugins {
 
     /* - - - - - Agregado Por el Equipo - Firebase - - - - - */
     id 'com.google.gms.google-services' // Add the Google services Gradle plugin
+
+    /* - - - - - Agregado Por el Equipo - MercadoPago - - - - - */
+
 }
 
 android {
@@ -12,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId "com.myaplication.policarrito"
-        minSdk 22
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -66,5 +69,6 @@ dependencies {
 
 
     /* - - - - - Agregado Por el Equipo - Mercado Pago - - - - - */
-    implementation 'com.mercadopago:sdk:2.5.4'
+
+
 }
