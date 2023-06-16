@@ -43,14 +43,16 @@
             <LinearLayout
                 android:id="@+id/LinearLayout_01"
                 android:layout_width="match_parent"
-                android:layout_height="330dp"
-                android:layout_marginTop="40dp"
+                android:layout_height="280dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="80dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="50dp"
+                    android:layout_width="390dp"
+                    android:layout_height="230dp"
+                    android:layout_margin="0dp"
                     android:backgroundTint="@color/Politecnico"
                     android:elevation="8dp"
                     app:cardCornerRadius="15dp">
@@ -62,6 +64,8 @@
                         android:layout_alignParentBottom="true"
                         android:orientation="vertical">
 
+                        <!-- Text of cardview  -->
+
                         <ImageView
                             android:id="@+id/imageUser"
                             android:layout_width="wrap_content"
@@ -69,9 +73,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="10dp"
-                            android:src="@drawable/ic_promociondiadelpadre"/>
-
-                                <!-- Text of cardview  -->
+                            android:src="@drawable/ic_promociondiadelpadre" />
 
                         <TextView
                             android:layout_width="match_parent"
