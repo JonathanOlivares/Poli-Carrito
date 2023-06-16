@@ -137,7 +137,7 @@
                                 android:textStyle="bold" />
 
                             <ImageView
-                                android:layout_width="150dp"
+                                android:layout_width="140dp"
                                 android:layout_height="150dp"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginBottom="16dp"
@@ -229,7 +229,7 @@
                                 android:textStyle="bold" />
 
                             <ImageView
-                                android:layout_width="150dp"
+                                android:layout_width="140dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginBottom="16dp"
@@ -281,11 +281,11 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="110dp"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/electrodomesticos" />
+                        android:src="@drawable/img_electrodomesticos" />
 
                     <Button
                         android:id="@+id/Btn_Electrodomesticos"
@@ -316,18 +316,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto"
-                        android:text="Ropa (Proximamente)"
+                        android:text="Baterías y Sartenes (Proximamente)"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="110dp"
+                        android:layout_width="140dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="16dp"
-                        android:src="@drawable/img_ropa" />
+                        android:src="@drawable/img_cocina" />
 
                     <Button
                         android:id="@+id/Btn_Ropa"
