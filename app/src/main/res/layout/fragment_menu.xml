@@ -386,7 +386,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_frutas"
+                                android:src="@drawable/img_papeldebano"
                                 android:paddingBottom="10dp"/>
 
 
@@ -417,7 +417,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_ventilador"
+                                android:src="@drawable/img_uvas"
                                 android:paddingBottom="10dp"/>
 
 
@@ -447,7 +447,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_laptop"
+                                android:src="@drawable/img_switchnin"
                                 android:paddingBottom="10dp"/>
 
 
@@ -493,7 +493,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_laptop"
+                                android:src="@drawable/img_television"
                                 android:paddingBottom="10dp"/>
 
 
@@ -523,7 +523,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_laptop"
+                                android:src="@drawable/img_secadordemano"
                                 android:paddingBottom="10dp"/>
 
 
@@ -556,7 +556,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_celulares"
+                                android:src="@drawable/img_refrigerador"
                                 android:paddingBottom="10dp"/>
 
 
@@ -600,7 +600,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_laptop"
+                                android:src="@drawable/img_microondas"
                                 android:paddingBottom="10dp"/>
 
 
@@ -630,7 +630,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_laptop"
+                                android:src="@drawable/img_tenis"
                                 android:paddingBottom="10dp"/>
 
 
@@ -663,7 +663,7 @@
                                 android:layout_height="120dp"
                                 android:padding="8dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_celulares"
+                                android:src="@drawable/img_cajapscuatro"
                                 android:paddingBottom="10dp"/>
 
                         </LinearLayout>
