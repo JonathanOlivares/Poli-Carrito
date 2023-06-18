@@ -314,7 +314,7 @@
             </LinearLayout>
 
 
-            <!--       Inicio de Cardviews cuadradas tercer fila       -->
+            <!--      Inicio de tercer fila, Cardviews cuadradas    -->
 
 
             <LinearLayout
@@ -327,10 +327,28 @@
                 android:orientation="vertical"
                 android:paddingStart="20dp">
 
+                <!--        Barra divisora          -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="-150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="0dp">
+
+                    <!-- Contenido existente -->
+
+                    <!-- Agrega la división -->
+                    <include layout="@layout/divider" />
+
+                </LinearLayout>
+
+
                 <TextView
                     android:id="@+id/TeVi_Datospopulares"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:text="Selecciones populares para explorar"
                     android:textAlignment="center"
                     android:textColor="#000000"
@@ -343,6 +361,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
+
 
                     <!--           Primer CardView Cuadrada         -->
 
@@ -445,7 +464,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
+                    android:layout_marginTop="-4dp"
                     android:layout_marginEnd="0dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal"
@@ -456,7 +475,7 @@
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="2dp"
+                        android:layout_marginStart="0dp"
                         android:layout_marginEnd="4dp"
                         android:layout_weight="4"
                         android:backgroundTint="#FFFFFF"
@@ -545,8 +564,235 @@
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
 
+                <!--        Segunda Fila cardviews redondas       -->
+
+                <!--       Septima Cardview cuadrada        -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@drawable/card_round_background" >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="#FFFFFF"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:padding="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_laptop"
+                                android:paddingBottom="10dp"/>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!--       Octava Cardview cuadrada        -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="#FFFFFF"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:padding="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_laptop"
+                                android:paddingBottom="10dp"/>
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                    <!--       Novena Cardview cuadrada        -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="#FFFFFF"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="#FFFFFF" >
+
+                            <ImageView
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                android:padding="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_celulares"
+                                android:paddingBottom="10dp"/>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!--        Barra divisora          -->
+
+                <LinearLayout
+                    android:id="@+id/Toolbar2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="-150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="0dp">
+
+                    <!-- Contenido existente -->
+
+                    <!-- Agrega la división -->
+                    <include layout="@layout/divider" />
+
+                </LinearLayout>
 
             </LinearLayout>
+
+
+
+            <!--             Barra recomendado             -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_04"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/LinearLayout_03"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp">
+
+                <TextView
+                    android:id="@+id/TeVi_Barrarecomendado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recomendado"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="0dp"
+                        android:layout_weight="4"
+                        android:backgroundTint="#FFFFFF"
+                        android:elevation="8dp"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:background="#000000">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:padding="0dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_recomendado"
+                                android:paddingBottom="10dp"/>
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Motos"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Con hasta 20% de ahorro"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="8dp"
+                                android:textAlignment="0"
+                                android:textColor="#FFFFFF"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/Btn_Verproducto01"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginStart="-140dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/ic_buttom"
+                                android:layout_marginBottom="15dp"
+                                android:scaleType="centerCrop"
+                                android:paddingLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:text="Ver produtos"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"/>
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
 
 
 
