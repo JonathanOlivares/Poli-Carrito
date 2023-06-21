@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.myaplication.policarrito.MenuFragment"
-        android:label="Inicio"
+        android:label="Poli Carrito"
         tools:layout="@layout/fragment_menu" />
     <fragment
         android:id="@+id/categoriasFragment"

@@ -27,12 +27,12 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginEnd="0dp"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Perfil "
-                android:textSize="35sp"
+                android:text="Información de la cuenta"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,16 +92,16 @@
                             android:paddingStart="10dp"
                             android:paddingTop="10dp"
                             android:paddingEnd="10dp"
-                            android:paddingBottom="30dp">
+                            android:paddingBottom="0dp">
 
-                            <TextView
+                            <!--<TextView
                                 android:id="@+id/TeVi_Datos"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/fra_cuenta_TituloDatos"
                                 android:textAlignment="center"
                                 android:textSize="18sp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold" />-->
                         </LinearLayout>
 
                         <LinearLayout
