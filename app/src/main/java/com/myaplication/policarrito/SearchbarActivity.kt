@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.widget.SearchView
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import androidx.fragment.app.Fragment
 
 
 class SearchbarActivity : AppCompatActivity() {

@@ -15,7 +15,7 @@ class StartSpeechRecognitionActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_startspeechrecognition)
+        setContentView(R.layout.fragment_startspeechrecognition)
 
         // Llamar a startSpeechRecognition cuando sea necesario, por ejemplo, en respuesta a un botón
         startSpeechRecognition()

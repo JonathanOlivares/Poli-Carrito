@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools='http://schemas.android.com/tools'
+    android:layout_width='match_parent'
+    android:layout_height='match_parent'
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation='vertical'
+    tools:context='.StartSpeechRecognitionActivity'
+    android:background="@drawable/background_gradient3">
+
+    <Button
+        android:id="@+id/ComandovozButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="160dp"
+        app:menu="@menu/bottom_navigation_menu"
+        android:backgroundTint="@color/Politecnico"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_goneMarginBottom="40dp"
+        app:itemIconTint="@drawable/bottom_navigation_colors"
+        app:itemTextColor="@drawable/bottom_navigation_colors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:icon="@drawable/ic_carrito_svg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
