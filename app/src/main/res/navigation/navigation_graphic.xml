@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.myaplication.policarrito.MenuFragment"
-        android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        android:label="Inicio"
+        tools:layout="@layout/inicio" />
     <fragment
         android:id="@+id/categoriasFragment"
         android:name="com.myaplication.policarrito.CategoriasFragment"
-        android:label="fragment_categorias"
-        tools:layout="@layout/fragment_categorias" />
+        android:label="Categorias"
+        tools:layout="@layout/categorias" />
     <fragment
         android:id="@+id/carritoFragment"
         android:name="com.myaplication.policarrito.CarritoFragment"
-        android:label="fragment_carrito"
-        tools:layout="@layout/fragment_carrito" />
+        android:label="Carrito de compras "
+        tools:layout="@layout/carrito" />
     <fragment
         android:id="@+id/cuentaFragment"
         android:name="com.myaplication.policarrito.CuentaFragment"
-        android:label="fragment_cuenta"
-        tools:layout="@layout/fragment_cuenta" />
+        android:label="Perfil"
+        tools:layout="@layout/perfil" />
 </navigation>

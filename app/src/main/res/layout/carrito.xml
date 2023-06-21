@@ -22,12 +22,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.Toolbar
+            <!-- Titulo Perfil -->
+            <LinearLayout
+                android:id="@+id/LinearLayout_01"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#62152D"
-                app:title="@string/fra_cuenta_Titulo"
-                app:titleTextColor="#FFFFFF"></androidx.appcompat.widget.Toolbar>
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/Politecnico">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="0dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Agrega productos a través de tu cámara "
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/imageView"
+                    android:layout_width="32dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="76dp"
+                    android:layout_marginEnd="60dp"
+                    android:src="@drawable/img_camera_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            </LinearLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
     </LinearLayout>
@@ -42,11 +76,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <LinearLayout
                 android:id="@+id/LinearLayout_02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -59,62 +96,53 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <LinearLayout
-                            android:id="@+id/LiLa_Datos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingStart="10dp"
-                            android:paddingTop="10dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="30dp">
-
-                            <TextView
-                                android:id="@+id/TeVi_Datos"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/fra_cuenta_TituloDatos"
-                                android:textAlignment="center"
-                                android:textSize="18sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/Lila_Datos02"
+                            android:id="@+id/Lila_Carrito02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/LiLa_Datos"
                             android:orientation="vertical"
+                            android:paddingTop="10dp"
                             android:paddingStart="10dp"
                             android:paddingEnd="10dp"
                             android:paddingBottom="20dp">
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
-                                <TextView
-                                    android:id="@+id/TeVi_TituloCorreo"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/fra_cuenta_Correo"
-                                    android:textAlignment="center"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold"
-                                    android:paddingBottom="20dp"/>
 
                                 <TextView
-                                    android:id="@+id/TeVi_InformacionCorreo"
+                                    android:id="@+id/TeVi_InformacionMontoPago"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="20dp"
+                                    android:text="Monto a Pagar"
+                                    android:textAlignment="center"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/TeVi_MontoPago"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/design_text"
                                     android:paddingTop="15dp"
                                     android:paddingBottom="15dp"
-                                    android:text=""
+                                    android:text="100"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="200dp"
+                                    android:layout_height="200dp"
+                                    android:layout_marginStart="80dp"
+                                    android:layout_marginVertical="@dimen/cardview_default_radius"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/img_carrito"/>
 
                             </LinearLayout>
                         </LinearLayout>
@@ -142,7 +170,7 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            android:id="@+id/LiLa_Signup"
+                            android:id="@+id/LiLa_Pagar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -151,16 +179,16 @@
                             android:paddingEnd="50dp"
                             android:paddingBottom="20dp">
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/Btn_Logout"
-                            android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_marginTop="0dp"
-                            android:background="@drawable/ic_buttom"
-                            android:paddingLeft="64dp"
-                            android:paddingRight="64dp"
-                            android:text="@string/fra_cuenta_Logout"
-                            android:textColor="@color/white" />
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/Btn_Logout02"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/ic_buttom"
+                                android:paddingLeft="64dp"
+                                android:paddingRight="64dp"
+                                android:text="Proceder al pago"
+                                android:textColor="@color/white" />
 
                         </LinearLayout>
 

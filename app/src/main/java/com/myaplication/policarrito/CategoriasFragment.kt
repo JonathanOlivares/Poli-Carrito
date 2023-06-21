@@ -34,7 +34,7 @@ class CategoriasFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categorias, container, false)
+        return inflater.inflate(R.layout.categorias, container, false)
     }
 
     companion object {

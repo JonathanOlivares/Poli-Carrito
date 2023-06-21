@@ -51,7 +51,7 @@ class CarritoFragment : Fragment() {
     ): View?
     {
         /* - - - - - Agregado - Informacion Correo - - - - - */
-        val view: View = inflater.inflate(R.layout.fragment_carrito, container, false)
+        val view: View = inflater.inflate(R.layout.carrito, container, false)
 
         val BotonPagar = view.findViewById<TextView>(R.id.Btn_Logout02)
 
