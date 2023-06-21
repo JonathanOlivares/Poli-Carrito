@@ -43,24 +43,7 @@
 
 
 
-<!--<Button
-    android:id="@+id/ComandovozButton"
-    android:layout_width="70dp"
-    android:layout_height="70dp"
-    android:layout_marginTop="0dp"
-    android:layout_marginStart="160dp"
-    app:menu="@menu/bottom_navigation_menu"
-    android:backgroundTint="@color/Politecnico"
-    android:textColor="#FFFFFF"
-    android:fontFamily="sans-serif-condensed-medium"
-    app:layout_goneMarginBottom="40dp"
-    app:itemIconTint="@drawable/bottom_navigation_colors"
-    app:itemTextColor="@drawable/bottom_navigation_colors"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    android:icon="@drawable/ic_carrito_svg"/>-->
+
 
 
 

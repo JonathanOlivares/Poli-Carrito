@@ -16,10 +16,11 @@
         android:label="Categorias"
         tools:layout="@layout/fragment_categorias" />
     <fragment
-        android:id="@+id/startspeechsecognitionFragment"
+        android:id="@+id/startspeechrecognitionFragment"
         android:name="com.myaplication.policarrito.StartSpeechRecognitionFragment"
         android:label="Busqueda por voz"
         android:layout="@layout/fragment_startspeechrecognition"/>
+
     <fragment
         android:id="@+id/carritoFragment"
         android:name="com.myaplication.policarrito.CarritoFragment"
