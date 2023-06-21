@@ -51,7 +51,7 @@ class CuentaFragment : Fragment() {
                              ): View?
     {
         /* - - - - - Agregado - Informacion Correo - - - - - */
-        val view: View = inflater.inflate(R.layout.perfil, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_cuenta, container, false)
 
         if (auth.currentUser != null) {
             val user = Firebase.auth.currentUser
