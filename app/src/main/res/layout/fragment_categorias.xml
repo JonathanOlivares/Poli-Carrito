@@ -80,6 +80,7 @@
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
+                            android:id="@+id/LiLa_Frutas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -101,14 +102,6 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginBottom="16dp"
                                 android:src="@drawable/img_manzana" />
-
-                            <Button
-                                android:id="@+id/Btn_Frutas"
-                                android:layout_width="136dp"
-                                android:layout_height="225dp"
-                                android:layout_weight="1"
-                                android:text="Botón"
-                                android:visibility="invisible" />
 
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
