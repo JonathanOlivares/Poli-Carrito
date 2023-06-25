@@ -60,4 +60,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="tv_take_photo">Tomar foto</string>
+    <string name="tv_description">Selecciona una imagen</string>
+    <string name="tv_placeholder">Object detection demo</string>
+    <string name="title_activity_wa">WA</string>
+
 </resources>
