@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -42,13 +43,26 @@ class CategoriasFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_categorias, container, false)
 
 
-        val BotonSignup = view.findViewById<TextView>(R.id.TeVi_Frutas)
+        val BotonSignup = view.findViewById<TextView>(R.id.Btn_Frutas)
+        val BotonCamara = view.findViewById<TextView>(R.id.Btn_Camara)
 
         BotonSignup.setOnClickListener{
 
             activity?.let{
                 val win_login = Intent (it, ProductosActivity::class.java)
                 it.startActivity(win_login)
+            }
+        }
+
+
+        BotonCamara.setOnClickListener{
+            activity?.let{
+                //val win_login = Intent (it, PagosActivity::class.java)
+
+                val intent = Intent(requireContext(), CamaraActivity::class.java)
+                startActivity(intent)
+
+                //it.startActivity(win_login)
             }
         }
 
@@ -75,4 +89,6 @@ class CategoriasFragment : Fragment() {
                 }
             }
     }
+
+
 }
