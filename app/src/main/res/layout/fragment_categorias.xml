@@ -82,6 +82,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/MaCaVi_Frutas"
                         android:layout_width="135dp"
                         android:layout_height="200dp"
                         android:layout_margin="10dp"
@@ -89,6 +90,7 @@
                         app:cardCornerRadius="10dp">
 
                         <LinearLayout
+                            android:id="@+id/LiLa_Frutas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -111,15 +113,14 @@
                                 android:layout_marginBottom="16dp"
                                 android:src="@drawable/img_manzana" />
 
-                            <Button
-                                android:id="@+id/Btn_Frutas"
-                                android:layout_width="136dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="Botón"
-                                android:visibility="invisible" />
-
                         </LinearLayout>
+
+                        <Button
+                            android:id="@+id/Btn_Frutas"
+                            android:layout_width="136dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
