@@ -15,29 +15,27 @@ import com.google.firebase.database.ValueEventListener
 class ProductosActivity : AppCompatActivity() {
 
 
-    //
-
     private lateinit var dbref : DatabaseReference
     private lateinit var userRecyclerview : RecyclerView
-    private lateinit var userArrayList : ArrayList<Productos>
+    private lateinit var userArrayList : ArrayList<Frutas>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
 
-        userRecyclerview = findViewById(R.id.ReVi_Datos)
+        userRecyclerview = findViewById(R.id.ReVi_DatosList)
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
-        userArrayList = arrayListOf<Productos>()
+        userArrayList = arrayListOf<Frutas>()
         getUserData()
 
     }
 
     private fun getUserData() {
 
-        dbref = FirebaseDatabase.getInstance().getReference("Frutas")
+        dbref = FirebaseDatabase.getInstance().getReference("Productos/Frutas")
 
         dbref.addValueEventListener(object : ValueEventListener{
 
@@ -48,8 +46,8 @@ class ProductosActivity : AppCompatActivity() {
                     for (userSnapshot in snapshot.children){
 
 
-                        val user = userSnapshot.getValue(Productos::class.java)
-                        userArrayList.add(user!!)
+                        val Frutas_02 = userSnapshot.getValue(Frutas::class.java)
+                        userArrayList.add(Frutas_02!!)
 
                     }
 
@@ -63,10 +61,7 @@ class ProductosActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
-
         })
-
     }
 }
 

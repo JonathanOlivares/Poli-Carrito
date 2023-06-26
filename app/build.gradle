@@ -48,7 +48,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.10.1' //1
     implementation 'androidx.appcompat:appcompat:1.6.1' //2
     implementation 'com.google.android.material:material:1.9.0' //3
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'//4
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' //4
     testImplementation 'junit:junit:4.13.2' //5
     androidTestImplementation 'androidx.test.ext:junit:1.1.5' //6
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' //7
@@ -76,6 +76,5 @@ dependencies {
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
 
     /* - - - - - Agregado Por el Equipo - Realtime Database - - - - - */
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
 }

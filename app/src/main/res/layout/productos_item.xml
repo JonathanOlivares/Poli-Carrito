@@ -29,11 +29,11 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvfirstName"
+                android:id="@+id/TeVi_Nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Arya"
+                android:text="Producto"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
 
@@ -54,11 +54,11 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvlastName"
+                android:id="@+id/TeVi_Precio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Stark"
+                android:text="Pesos"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
 
@@ -79,17 +79,14 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/tvage"
+                android:id="@+id/TeVi_Existencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="20"
+                android:text="Cantidad"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
 
         </LinearLayout>
-
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

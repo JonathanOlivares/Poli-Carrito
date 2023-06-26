@@ -42,7 +42,7 @@ class CategoriasFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_categorias, container, false)
 
 
-        val BotonSignup = view.findViewById<TextView>(R.id.Btn_Frutas)
+        val BotonSignup = view.findViewById<TextView>(R.id.TeVi_Frutas)
 
         BotonSignup.setOnClickListener{
 

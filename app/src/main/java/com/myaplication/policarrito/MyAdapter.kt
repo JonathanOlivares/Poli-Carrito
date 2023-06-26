@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter(private val userList : ArrayList<Productos>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
+class MyAdapter(private val FrutasList : ArrayList<Frutas>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -20,25 +21,25 @@ class MyAdapter(private val userList : ArrayList<Productos>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        val currentitem = userList[position]
+        val currentitem = FrutasList[position]
 
-        holder.firstName.text = currentitem.Nombre
-        holder.lastName.text = currentitem.Precio
-        holder.age.text = currentitem.Cantidad
+        holder.Nombre.text = currentitem.Nombre
+        holder.Precio.text = currentitem.Precio
+        holder.Existencia.text = currentitem.Cantidad
 
     }
 
     override fun getItemCount(): Int {
 
-        return userList.size
+        return FrutasList.size
     }
 
 
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
 
-        val firstName : TextView = itemView.findViewById(R.id.tvfirstName)
-        val lastName : TextView = itemView.findViewById(R.id.tvlastName)
-        val age : TextView = itemView.findViewById(R.id.tvage)
+        val Nombre : TextView = itemView.findViewById(R.id.TeVi_Nombre)
+        val Precio : TextView = itemView.findViewById(R.id.TeVi_Precio)
+        val Existencia : TextView = itemView.findViewById(R.id.TeVi_Existencia)
 
     }
 
