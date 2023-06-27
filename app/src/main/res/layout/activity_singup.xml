@@ -95,6 +95,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:elevation="8dp"
+                    android:backgroundTint="@color/white"
                     app:cardCornerRadius="15dp">
 
                     <RelativeLayout
@@ -226,6 +227,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
+                    android:backgroundTint="@color/white"
                     android:elevation="8dp"
                     app:cardCornerRadius="15dp">
 

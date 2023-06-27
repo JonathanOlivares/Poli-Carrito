@@ -78,7 +78,8 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:elevation="8dp"
-                    app:cardCornerRadius="15dp">
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -124,6 +125,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/fra_cuenta_Correo"
+                                    android:textColor="@color/black"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold"
@@ -137,6 +139,7 @@
                                     android:paddingTop="15dp"
                                     android:paddingBottom="15dp"
                                     android:text=""
+                                    android:textColor="@color/black"
                                     android:textAlignment="center"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
@@ -160,7 +163,8 @@
                     android:layout_height="match_parent"
                     android:layout_margin="20dp"
                     android:elevation="8dp"
-                    app:cardCornerRadius="15dp">
+                    app:cardCornerRadius="15dp"
+                    android:backgroundTint="@color/white">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
