@@ -18,7 +18,7 @@
             android:layout_gravity="center"
             android:text="@string/tv_placeholder"
             android:textAlignment="center"
-            android:textSize="40sp" />
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -84,9 +84,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center|bottom"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/Politecnico"
         android:drawableLeft="@drawable/img_camera_24"
         android:text="@string/tv_take_photo"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
 
 </RelativeLayout>

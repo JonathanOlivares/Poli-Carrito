@@ -63,7 +63,7 @@
 
     <string name="tv_take_photo">Tomar foto</string>
     <string name="tv_description">Selecciona una imagen</string>
-    <string name="tv_placeholder">Object detection demo</string>
+    <string name="tv_placeholder">Demostración de detección de objetos</string>
     <string name="title_activity_wa">WA</string>
 
 </resources>
