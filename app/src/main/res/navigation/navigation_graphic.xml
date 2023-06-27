@@ -9,26 +9,31 @@
         android:id="@+id/menuFragment"
         android:name="com.myaplication.policarrito.MenuFragment"
         android:label="Poli Carrito"
+        android:textColor="@color/white"
         tools:layout="@layout/fragment_menu" />
     <fragment
         android:id="@+id/categoriasFragment"
         android:name="com.myaplication.policarrito.CategoriasFragment"
         android:label="Categorias"
+        android:textColor="@color/white"
         tools:layout="@layout/fragment_categorias" />
     <fragment
         android:id="@+id/startspeechrecognitionFragment"
         android:name="com.myaplication.policarrito.StartSpeechRecognitionFragment"
         android:label="Comando de voz"
+        android:textColor="@color/white"
         android:layout="@layout/fragment_startspeechrecognition"/>
 
     <fragment
         android:id="@+id/carritoFragment"
         android:name="com.myaplication.policarrito.CarritoFragment"
         android:label="Carrito de compras "
+        android:textColor="@color/white"
         tools:layout="@layout/fragment_carrito" />
     <fragment
         android:id="@+id/cuentaFragment"
         android:name="com.myaplication.policarrito.CuentaFragment"
         android:label="Perfil"
+        android:textColor="@color/white"
         tools:layout="@layout/fragment_cuenta" />
 </navigation>
