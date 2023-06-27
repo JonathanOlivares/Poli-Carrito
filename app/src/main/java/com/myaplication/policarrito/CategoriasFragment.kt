@@ -46,7 +46,7 @@ class CategoriasFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_categorias, container, false)
 
 
-        val BotonSignup = view.findViewById<TextView>(R.id.TeVi_Frutas)
+        val BotonSignup = view.findViewById<TextView>(R.id.Btn_Frutas)
         val BotonCamara = view.findViewById<TextView>(R.id.Btn_Camara)
 
         BotonSignup.setOnClickListener{
@@ -60,12 +60,8 @@ class CategoriasFragment : Fragment() {
 
         BotonCamara.setOnClickListener{
             activity?.let{
-                //val win_login = Intent (it, PagosActivity::class.java)
-
                 val intent = Intent(requireContext(), CamaraActivity::class.java)
                 startActivity(intent)
-
-                //it.startActivity(win_login)
             }
         }
 
