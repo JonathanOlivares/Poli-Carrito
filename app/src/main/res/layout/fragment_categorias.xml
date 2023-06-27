@@ -156,7 +156,7 @@
                             <Button
                                 android:id="@+id/Btn_Verdura"
                                 android:layout_width="136dp"
-                                android:layout_height="225dp"
+                                android:layout_height="99dp"
                                 android:layout_weight="1"
                                 android:text="Botón"
                                 android:visibility="invisible" />

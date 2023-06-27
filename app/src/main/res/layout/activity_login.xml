@@ -51,12 +51,12 @@
 
                         <ImageView
                             android:id="@+id/imageUser"
-                            android:layout_width="280dp"
-                            android:layout_height="280dp"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="10dp"
-                            android:src="@drawable/ic_policarrito" />
+                            android:src="@drawable/burrito_burrito" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
