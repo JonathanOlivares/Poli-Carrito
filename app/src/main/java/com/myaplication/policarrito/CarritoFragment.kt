@@ -54,6 +54,7 @@ class CarritoFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_carrito, container, false)
 
         val BotonPagar = view.findViewById<TextView>(R.id.Btn_Logout02)
+        val BotonCamara = view.findViewById<TextView>(R.id.Btn_Camara)
 
         BotonPagar.setOnClickListener{
             activity?.let{
@@ -70,7 +71,12 @@ class CarritoFragment : Fragment() {
             }
         }
 
-
+        BotonCamara.setOnClickListener{
+            activity?.let{
+                val intent = Intent(requireContext(), CamaraActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
 
 

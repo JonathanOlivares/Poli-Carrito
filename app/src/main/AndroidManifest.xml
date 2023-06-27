@@ -23,7 +23,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_policarrito"
+        android:icon="@drawable/burrito_burrito"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -46,11 +46,11 @@
         <activity
             android:name=".SingupActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" />-->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
