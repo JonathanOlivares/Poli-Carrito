@@ -70,7 +70,8 @@
                         android:textStyle="normal"
                         android:visibility="visible"
                         app:icon="@drawable/img_camera_24"
-                        app:iconTint="#000000" />
+                        app:iconTint="#000000"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </LinearLayout>
 
 
