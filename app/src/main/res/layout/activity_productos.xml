@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
-
     android:id="@+id/LinearLayout_Base"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,7 +17,6 @@
             android:id="@+id/RelativeLayout_01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
 
             <LinearLayout
                 android:id="@+id/LinearLayout_02"
@@ -55,6 +52,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Productos"
                                 android:textAlignment="center"
+                                android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -62,7 +60,7 @@
                                 android:id="@+id/ReVi_DatosList"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                tools:listitem="@layout/productos_item"/>
+                                tools:listitem="@layout/productos_item" />
 
                         </LinearLayout>
                     </RelativeLayout>
