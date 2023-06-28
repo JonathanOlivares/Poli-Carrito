@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -23,6 +24,10 @@ class ProductosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_productos)
+
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.Politecnico)
+
 
         userRecyclerview = findViewById(R.id.ReVi_DatosList)
         userRecyclerview.layoutManager = LinearLayoutManager(this)

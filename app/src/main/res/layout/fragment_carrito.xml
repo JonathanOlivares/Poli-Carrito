@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -34,8 +35,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="80dp"
                     android:layout_marginEnd="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:text="Agrega productos a través de tu cámara "
                     android:textSize="20sp"
@@ -57,7 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:layout_marginTop="70dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_toRightOf="@id/textView1"
                         android:background="@android:color/transparent"
                         android:minWidth="64dp"
@@ -81,141 +84,127 @@
         </com.google.android.material.appbar.AppBarLayout>
     </LinearLayout>
 
-    <ScrollView
-        android:id="@+id/ScrollView_01"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCartItems"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/llCartPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_Bar"
+        tools:listitem="@layout/cartproduct_item" />
 
-        <RelativeLayout
-            android:id="@+id/RelativeLayout_01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:id="@+id/LinearLayout_02"
+    <LinearLayout
+                android:id="@+id/llCartPayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvCartItems"
+                android:background="@color/white"
+                android:padding="20dp"
+                >
 
 
-
-                <com.google.android.material.card.MaterialCardView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:elevation="8dp"
-                    android:backgroundTint="@color/white"
-                    app:cardCornerRadius="15dp">
+                    android:layout_height="wrap_content"
+                    >
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvLastSubTotalItems"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SubTotal - Productos (0)"
+                        android:textColor="@color/black" />
 
+                    <TextView
+                        android:id="@+id/tvLastSubTotalprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:id="@+id/Lila_Carrito02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingTop="10dp"
-                            android:paddingStart="10dp"
-                            android:paddingEnd="10dp"
-                            android:paddingBottom="20dp">
-
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                </LinearLayout>
 
 
-                                <TextView
-                                    android:id="@+id/TeVi_InformacionMontoPago"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:paddingBottom="20dp"
-                                    android:text="Monto a Pagar"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/black"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
 
-                                <TextView
-                                    android:id="@+id/TeVi_MontoPago"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/design_text"
-                                    android:paddingTop="15dp"
-                                    android:paddingBottom="15dp"
-                                    android:text="100"
-                                    android:textColor="@color/black"
-                                    android:textAlignment="center"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio por Pickup (Proximamente)"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        />
 
-                                <ImageView
-                                    android:layout_width="200dp"
-                                    android:layout_height="200dp"
-                                    android:layout_marginStart="80dp"
-                                    android:layout_marginVertical="@dimen/cardview_default_radius"
-                                    android:layout_gravity="center_vertical"
-                                    android:src="@drawable/img_carrito"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
-                            </LinearLayout>
-                        </LinearLayout>
-                    </RelativeLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#3E3A3A"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precio Total"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvLastTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCartCheckout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_border"
+                    android:text="Proceder al Pago"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/LinearLayout_03"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/LinearLayout_02"
-                android:orientation="vertical">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="20dp"
-                    android:elevation="8dp"
-                    android:backgroundTint="@color/white"
-                    app:cardCornerRadius="15dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
-                            android:id="@+id/LiLa_Pagar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingStart="50dp"
-                            android:paddingTop="20dp"
-                            android:paddingEnd="50dp"
-                            android:paddingBottom="20dp">
-
-                            <androidx.appcompat.widget.AppCompatButton
-                                android:id="@+id/Btn_Logout02"
-                                android:layout_width="match_parent"
-                                android:layout_height="48dp"
-                                android:layout_marginTop="0dp"
-                                android:background="@drawable/ic_buttom"
-                                android:paddingLeft="64dp"
-                                android:paddingRight="64dp"
-                                android:text="Proceder al pago"
-                                android:textColor="@color/white" />
-
-                        </LinearLayout>
-
-                    </RelativeLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-            </LinearLayout>
-
-        </RelativeLayout>
-    </ScrollView>
 </LinearLayout>

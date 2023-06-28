@@ -53,18 +53,18 @@ class CarritoFragment : Fragment() {
         /* - - - - - Agregado - Informacion Pago - - - - - */
         val view: View = inflater.inflate(R.layout.fragment_carrito, container, false)
 
-        val BotonPagar = view.findViewById<TextView>(R.id.Btn_Logout02)
+        val BotonPagar = view.findViewById<TextView>(R.id.btnCartCheckout)
         val BotonCamara = view.findViewById<TextView>(R.id.Btn_Camara)
 
         BotonPagar.setOnClickListener{
             activity?.let{
                 //val win_login = Intent (it, PagosActivity::class.java)
 
-                val montoPago = view.findViewById<TextView>(R.id.TeVi_MontoPago).toString()
+                //val montoPago = view.findViewById<TextView>(R.id.TeVi_MontoPago).toString()
 
                 val intent = Intent(requireContext(), PagosActivity::class.java)
 
-                intent.putExtra("monto_pago", montoPago)
+                //intent.putExtra("monto_pago", montoPago)
                 startActivity(intent)
 
                 //it.startActivity(win_login)

@@ -7,6 +7,7 @@ import android.widget.EditText
 
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -19,6 +20,9 @@ class SingupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_singup)
+
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.Politecnico)
 
 
         // - Agregado - Initialize Firebase Auth

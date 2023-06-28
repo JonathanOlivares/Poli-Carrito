@@ -8,6 +8,7 @@ import android.widget.EditText
 
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.paypal.android.sdk.payments.PayPalConfiguration
 import com.paypal.android.sdk.payments.PayPalPayment
 import com.paypal.android.sdk.payments.PayPalService
@@ -30,6 +31,10 @@ class PagosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pagos)
+
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.Politecnico)
+
 
         configuration = PayPalConfiguration()
             .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
