@@ -35,15 +35,18 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         const val TAG = "TFLite - ODT"
         const val REQUEST_IMAGE_CAPTURE: Int = 1
         private const val MAX_FONT_SIZE = 96F
+        const val REQUEST_OPEN_IMAGE = 1001
     }
 
     private lateinit var captureImageFab: Button
+    private lateinit var captureAgregar: Button
     private lateinit var inputImageView: ImageView
     private lateinit var imgSampleOne: ImageView
     private lateinit var imgSampleTwo: ImageView
     private lateinit var imgSampleThree: ImageView
     private lateinit var tvPlaceholder: TextView
     private lateinit var currentPhotoPath: String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +58,9 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         imgSampleTwo = findViewById(R.id.imgSampleTwo)
         imgSampleThree = findViewById(R.id.imgSampleThree)
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
+        captureAgregar = findViewById(R.id.captureAgregar)
 
+        captureAgregar.setOnClickListener(this)
         captureImageFab.setOnClickListener(this)
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
@@ -69,7 +74,18 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             setViewAndDetect(getCapturedImage())
         }
+        if (requestCode == REQUEST_OPEN_IMAGE &&
+            resultCode == Activity.RESULT_OK
+        ) {
+            try {
+                setViewAndDetect(getCapturedImage())
+            }
+            catch (e: IOException) {
+                Log.e(TAG, "Error loading image: ${e.message}")
+            }
+            }
     }
+
 
     /**
      * onClick(v: View?)
@@ -93,7 +109,30 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
             R.id.imgSampleThree -> {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_three))
             }
+            R.id.captureAgregar -> {
+                try {
+                    openSelectedImage()
+                } catch (e: ActivityNotFoundException) {
+                    Log.e(TAG, e.message.toString())
+                }
+            }
         }
+
+    }
+
+    private fun openSelectedImage() {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "image/*"
+        }
+        startActivityForResult(intent, REQUEST_OPEN_IMAGE)
+        val request: File? = try {
+            createImageFile()
+        } catch (e: IOException) {
+            Log.e(TAG, e.message.toString())
+            null
+        }
+
     }
 
     /**
