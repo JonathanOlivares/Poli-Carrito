@@ -29,31 +29,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliCarrito"
         tools:targetApi="31">
-        <activity
-            android:name=".ProductosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PagosActivity"
-            android:exported="false" />
+
         <activity
             android:name=".CamaraActivity"
             android:exported="false" />
         <activity
             android:name=".DetallesActivity"
             android:exported="false" />
-        <activity
-            android:name=".MenuActivity"
-            android:exported="false"
-            android:label="@string/title_activity_menu"
-            android:theme="@style/Theme.PoliCarrito.NoActionBar" />
-        <activity
-            android:name=".SingupActivity"
-            android:exported="false" />
-        <!--<activity
-            android:name=".MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="false"
-            android:screenOrientation="portrait" />-->
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -63,6 +46,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/Theme.PoliCarrito.NoActionBar" />
+        <activity
+            android:name=".PagosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SingupActivity"
+            android:exported="false" />
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -74,5 +73,4 @@
                 android:resource="@xml/file_paths" />
         </provider>
     </application>
-
 </manifest>
