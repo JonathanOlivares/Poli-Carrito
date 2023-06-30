@@ -39,6 +39,9 @@
             android:name=".CamaraActivity"
             android:exported="false" />
         <activity
+            android:name=".DetallesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false"
             android:label="@string/title_activity_menu"

@@ -4,29 +4,37 @@ package com.myaplication.policarrito
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class MyAdapter(private val FrutasList : ArrayList<Frutas>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val FrutasList : ArrayList<Productos>)
+    : RecyclerView.Adapter<MyAdapter.ProductosViewHolder>() {
 
+    private lateinit var mListener: onItemClickListener
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.productos_item,
-            parent,false)
-        return MyViewHolder(itemView)
-
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    fun setOnItemClickListener(clickListener: onItemClickListener){
+        mListener = clickListener
+    }
 
-        val currentitem = FrutasList[position]
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductosViewHolder {
 
-        holder.Nombre.text = currentitem.Nombre
-        holder.Precio.text = currentitem.Precio
-        holder.Existencia.text = currentitem.Cantidad
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.productos_item, parent,false)
+        return ProductosViewHolder(itemView, mListener)
+    }
 
+    override fun onBindViewHolder(holder: ProductosViewHolder, position: Int) {
+
+        val currentItem = FrutasList[position]
+
+        holder.Nombre.text = currentItem.Nombre
+        holder.Precio.text = currentItem.Precio
+        holder.Existencia.text = currentItem.Cantidad
     }
 
     override fun getItemCount(): Int {
@@ -34,13 +42,16 @@ class MyAdapter(private val FrutasList : ArrayList<Frutas>) : RecyclerView.Adapt
         return FrutasList.size
     }
 
-
-    class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    class ProductosViewHolder(itemView : View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
 
         val Nombre : TextView = itemView.findViewById(R.id.TeVi_Nombre)
         val Precio : TextView = itemView.findViewById(R.id.TeVi_Precio)
         val Existencia : TextView = itemView.findViewById(R.id.TeVi_Existencia)
 
+        init {
+            itemView.setOnClickListener {
+                clickListener.onItemClick(adapterPosition)
+            }
+        }
     }
-
 }
