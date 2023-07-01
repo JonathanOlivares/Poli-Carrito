@@ -1,6 +1,7 @@
 package com.myaplication.policarrito
 
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -39,7 +40,8 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private lateinit var captureImageFab: Button
-    private lateinit var captureAgregar: Button
+    private lateinit var detalles: Button
+//    private lateinit var captureAgregar: Button
     private lateinit var inputImageView: ImageView
     private lateinit var imgSampleOne: ImageView
     private lateinit var imgSampleTwo: ImageView
@@ -48,20 +50,23 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var currentPhotoPath: String
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camara)
 
         captureImageFab = findViewById(R.id.captureImageFab)
+        detalles = findViewById(R.id.detallesB)
         inputImageView = findViewById(R.id.imageView)
         imgSampleOne = findViewById(R.id.imgSampleOne)
         imgSampleTwo = findViewById(R.id.imgSampleTwo)
         imgSampleThree = findViewById(R.id.imgSampleThree)
         tvPlaceholder = findViewById(R.id.tvPlaceholder)
-        captureAgregar = findViewById(R.id.captureAgregar)
+       // captureAgregar = findViewById(R.id.captureAgregar)
 
-        captureAgregar.setOnClickListener(this)
+ //       captureAgregar.setOnClickListener(this)
         captureImageFab.setOnClickListener(this)
+        detalles.setOnClickListener(this)
         imgSampleOne.setOnClickListener(this)
         imgSampleTwo.setOnClickListener(this)
         imgSampleThree.setOnClickListener(this)
@@ -100,22 +105,32 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
                     Log.e(TAG, e.message.toString())
                 }
             }
+
             R.id.imgSampleOne -> {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_one))
             }
+
             R.id.imgSampleTwo -> {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_two))
             }
+
             R.id.imgSampleThree -> {
                 setViewAndDetect(getSampleImage(R.drawable.img_meal_three))
             }
-            R.id.captureAgregar -> {
-                try {
-                    openSelectedImage()
-                } catch (e: ActivityNotFoundException) {
-                    Log.e(TAG, e.message.toString())
-                }
+            // R.id.captureAgregar -> {
+            //    try {
+            //        openSelectedImage()
+            //    } catch (e: ActivityNotFoundException) {
+            //        Log.e(TAG, e.message.toString())
+            //    }
+            // }
+
+            R.id.detallesB -> {
+                    val win_login = Intent (this, DetallesActivity::class.java)
+                    startActivity(win_login)
             }
+
+
         }
 
     }
@@ -148,6 +163,7 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         // Note that we run this in the background thread to avoid blocking the app UI because
         // TFLite object detection is a synchronised process.
         lifecycleScope.launch(Dispatchers.Default) { runObjectDetection(bitmap) }
+
     }
 
     /**
