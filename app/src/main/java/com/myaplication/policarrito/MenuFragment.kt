@@ -1,10 +1,12 @@
 package com.myaplication.policarrito
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,19 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view: View = inflater.inflate(R.layout.fragment_categorias, container, false)
+
+        val BotonFrutas = view?.findViewById<TextView>(R.id.Btn_Fru)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false)
+
+        BotonFrutas?.setOnClickListener{
+            activity?.let{
+                val frutas = Intent (it, ProductosActivity::class.java)
+                it.startActivity(frutas)
+            }
+        }
+        return view
     }
 
     companion object {

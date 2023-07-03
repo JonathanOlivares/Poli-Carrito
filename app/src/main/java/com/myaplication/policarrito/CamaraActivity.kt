@@ -330,7 +330,7 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         runOnUiThread {
             inputImageView.setImageBitmap(imgWithResult)
         }
-        debugPrint(results)
+        // debugPrint(results)
     }
 
 
