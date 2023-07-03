@@ -1,25 +1,16 @@
 package com.myaplication.policarrito
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
+
 
 class ProductosActivity : AppCompatActivity() {
 
 
-    private lateinit var myDataBaseReference : DatabaseReference
-    private lateinit var myRecyclerview : RecyclerView
-    private lateinit var productosArrayList : ArrayList<Productos>
-    private lateinit var myAdapter: MyAdapter
+    private lateinit var auth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,16 +21,11 @@ class ProductosActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.Politecnico)
 
 
-        myRecyclerview = findViewById(R.id.ReVi_DatosList)
-        myRecyclerview.setHasFixedSize(true)
-        myRecyclerview.layoutManager = LinearLayoutManager(this)
-
-        productosArrayList = arrayListOf<Productos>()
-
-        // Coloca los datos de la base de datos en el RecyclerView
-        getUserData()
+        auth = FirebaseAuth.getInstance()
     }
 
+
+/*
     private fun getUserData() {
         myRecyclerview.visibility = View.GONE
 
@@ -55,7 +41,7 @@ class ProductosActivity : AppCompatActivity() {
                         val Frutas_02 = userSnapshot.getValue(Productos::class.java)
                         productosArrayList.add(Frutas_02!!)
                     }
-                    myAdapter = MyAdapter(productosArrayList)
+                    myAdapter = MyAdapter(productosArrayList, this@ProductosActivity)
                     myRecyclerview.adapter = myAdapter
 
                     myAdapter.setOnItemClickListener(object : MyAdapter.onItemClickListener
@@ -79,6 +65,5 @@ class ProductosActivity : AppCompatActivity() {
             }
         })
     }
+    */
 }
-
-

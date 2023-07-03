@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/productosFragment">
+
+    <fragment
+        android:id="@+id/productosFragment"
+        android:name="com.myaplication.policarrito.ProductosFragment"
+        android:label="ProductosFragment"
+        tools:layout="@layout/fragment_productos">
+
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/productosFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.myaplication.policarrito.DetallesFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_detalles">
+
+        <argument
+            android:name="productId"
+            android:defaultValue="null"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>

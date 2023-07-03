@@ -393,14 +393,8 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
                 val confidence: Int = category.score.times(100).toInt()
                 Log.d(TAG, "    Confidence: ${confidence}%")
             }
-
-
-
-
-
         }
     }
-
 }
 
 /**
