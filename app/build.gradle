@@ -6,7 +6,6 @@ plugins {
     id 'com.google.gms.google-services' // Add the Google services Gradle plugin
 
     /* - - - - - Agregado Por el Equipo - $$$ - - - - - */
-    id 'org.jetbrains.kotlin.android.extensions'
 }
 
 android {

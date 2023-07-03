@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import androidx.lifecycle.lifecycleScope
+import com.myaplication.policarrito.CamaraActivity.GlobalVariables.Companion.globalString
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.tensorflow.lite.support.image.TensorImage
@@ -92,6 +93,12 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
                 Log.e(TAG, "Error loading image: ${e.message}")
             }
             }
+    }
+
+    class GlobalVariables {
+        companion object {
+            var globalString: String = ""
+        }
     }
 
 
@@ -323,6 +330,7 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
         runOnUiThread {
             inputImageView.setImageBitmap(imgWithResult)
         }
+        debugPrint(results)
     }
 
 
@@ -381,9 +389,12 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
 
             for ((j, category) in obj.categories.withIndex()) {
                 Log.d(TAG, "    Label $j: ${category.label}")
+                globalString  = "${category.label}"
                 val confidence: Int = category.score.times(100).toInt()
                 Log.d(TAG, "    Confidence: ${confidence}%")
             }
+
+
 
 
 
