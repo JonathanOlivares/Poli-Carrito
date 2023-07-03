@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -11,17 +12,22 @@
         android:id="@+id/detailToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.google.android.material.appbar.MaterialToolbar
+        <Button
             android:id="@+id/detailActualToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="Details"
+            android:text="Detalles"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
             />
 
 
@@ -32,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:layout_constraintBottom_toTopOf="@id/llBottomDetails"
+        app:layout_constraintBottom_toTopOf="@+id/llBottomDetails"
         app:layout_constraintEnd_toEndOf="@id/detailToolbar"
         app:layout_constraintStart_toStartOf="@id/detailToolbar"
         app:layout_constraintTop_toBottomOf="@id/detailToolbar"
@@ -48,7 +54,7 @@
             <ImageView
                 android:id="@+id/ivDetails"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
                 android:padding="20dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/img_manzana"

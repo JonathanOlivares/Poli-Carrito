@@ -16,6 +16,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import androidx.lifecycle.lifecycleScope
@@ -54,6 +55,8 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camara)
+
+        window.statusBarColor = ContextCompat.getColor(this, R.color.Politecnico)
 
         captureImageFab = findViewById(R.id.captureImageFab)
         detalles = findViewById(R.id.detallesB)
@@ -381,6 +384,9 @@ class CamaraActivity : AppCompatActivity(), View.OnClickListener {
                 val confidence: Int = category.score.times(100).toInt()
                 Log.d(TAG, "    Confidence: ${confidence}%")
             }
+
+
+
         }
     }
 

@@ -47,6 +47,9 @@ class ProductosActivity : AppCompatActivity() {
 
         myDataBaseReference.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
+
+                productosArrayList.clear()
+
                 if (snapshot.exists()){
                     for (userSnapshot in snapshot.children){
                         val Frutas_02 = userSnapshot.getValue(Productos::class.java)
@@ -64,6 +67,7 @@ class ProductosActivity : AppCompatActivity() {
                             intent.putExtra("frutaPrecio", productosArrayList[position].Precio)
 
                             startActivity(intent)
+                            finish()
                         }
 
                     })
