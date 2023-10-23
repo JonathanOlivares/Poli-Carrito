@@ -2,20 +2,20 @@
     <string name="app_name">PoliCarrito</string>
 
     <string name="activity_login_01">B I E N V E N I D O</string>
-    <string name="activity_login_02">Inicia Sesion</string>
+    <string name="activity_login_02">Inicia Sesión</string>
     <string name="activity_login_03">Entrar</string>
-    <string name="activity_login_04">¿Eres nuevo? Registrate !</string>
+    <string name="activity_login_04">¿Eres nuevo? Regístrate !</string>
 
     <string name="activity_signup_01">Poli Carrito</string>
-    <string name="activity_signup_02">Registrate para continuar</string>
-    <string name="activity_signup_03">R e g i s t r a r s e</string>
-    <string name="activity_signup_04">¿Ya tienes una cuenta? Inicia Sesion !</string>
+    <string name="activity_signup_02">Regístrate para continuar</string>
+    <string name="activity_signup_03">R e g í s t r a r s e</string>
+    <string name="activity_signup_04">¿Ya tienes una cuenta? Inicia Sesión !</string>
     <string name="activity_signup_05">Ingrese sus datos</string>
 
     <string name="fra_cuenta_Titulo">Datos de la Cuenta</string>
     <string name="fra_cuenta_TituloDatos">Información</string>
     <string name="fra_cuenta_Logout">Cerrar Sesión</string>
-    <string name="fra_cuenta_Correo">Correo Electronico</string>
+    <string name="fra_cuenta_Correo">Correo Electrónico</string>
 
     <string name="title_active_login">Firebase Login</string>
     <string name="password">Contraseña</string>
