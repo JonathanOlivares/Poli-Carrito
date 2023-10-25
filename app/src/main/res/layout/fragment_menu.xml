@@ -74,11 +74,9 @@
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="0dp"
                             app:autoPlay="true"
-                            app:show
                             app:carouselType="SHOWCASE"
                             app:showNavigationButtons="false"
                             app:autoPlayDelay="2000" />
-                            <!--android:src="@drawable/img_promodiapadre" -->
 
                         <TextView
                             android:layout_width="match_parent"
