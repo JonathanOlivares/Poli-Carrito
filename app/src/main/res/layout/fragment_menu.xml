@@ -49,7 +49,7 @@
                 android:layout_marginTop="80dp"
                 android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="230dp"
                     android:layout_margin="0dp"
@@ -67,14 +67,18 @@
 
                         <!-- Text of cardview  -->
 
-                        <ImageView
-                            android:id="@+id/imageUser"
-                            android:layout_width="wrap_content"
+                        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                            android:id="@+id/carousel"
+                            android:layout_width="match_parent"
                             android:layout_height="185dp"
-                            android:layout_gravity="top"
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="0dp"
-                            android:src="@drawable/img_promodiapadre" />
+                            app:autoPlay="true"
+                            app:show
+                            app:carouselType="SHOWCASE"
+                            app:showNavigationButtons="false"
+                            app:autoPlayDelay="2000" />
+                            <!--android:src="@drawable/img_promodiapadre" -->
 
                         <TextView
                             android:layout_width="match_parent"
@@ -85,11 +89,10 @@
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:src="@drawable/ic_tarjetacredit_svg"/>
+                            android:textStyle="bold"/>
 
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
                     <!-- Inicio de Cardviews redondas -->

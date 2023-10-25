@@ -9,7 +9,6 @@ import android.widget.Button
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
-import com.example.shoeapp.DetailsFragmentArgs
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -32,7 +31,7 @@ class DetallesFragment : Fragment(R.layout.fragment_detalles) {
     private lateinit var binding: FragmentDetallesBinding
     private lateinit var productDatabaseReference: DatabaseReference
     private lateinit var auth: FirebaseAuth
-    private val args: DetailsFragmentArgs by navArgs()
+
 
     //private val orderDatabaseReference = Firebase.firestore.collection("orders")
 
@@ -50,7 +49,7 @@ class DetallesFragment : Fragment(R.layout.fragment_detalles) {
 
         productDatabaseReference = FirebaseDatabase.getInstance().getReference("products")
 
-        val productId = args.productId
+      /*  val productId = args.productId
         auth = FirebaseAuth.getInstance()
 
         currentUID = auth.currentUser!!.uid
@@ -85,8 +84,8 @@ class DetallesFragment : Fragment(R.layout.fragment_detalles) {
             override fun onCancelled(error: DatabaseError) {
             }
         }
-
-        productDatabaseReference.addValueEventListener(valueEvent)
+*/
+        //productDatabaseReference.addValueEventListener(valueEvent)
 
 
         binding.btnDetailsAddToCart.setOnClickListener {

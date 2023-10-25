@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,12 +26,15 @@ class MenuFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+
     }
 
     override fun onCreateView(
@@ -37,7 +43,7 @@ class MenuFragment : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_categorias, container, false)
 
-        val BotonFrutas = view?.findViewById<TextView>(R.id.Btn_Fru)
+        val BotonFrutas = view.findViewById<TextView>(R.id.Btn_Fru)
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_menu, container, false)
 
@@ -48,6 +54,8 @@ class MenuFragment : Fragment() {
             }
         }
         return view
+
+
     }
 
     companion object {
@@ -69,4 +77,11 @@ class MenuFragment : Fragment() {
                 }
             }
     }
+
+    override fun onResume() {
+        super.onResume()
+
+
+    }
+
 }
