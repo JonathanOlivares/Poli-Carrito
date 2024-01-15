@@ -26,6 +26,8 @@ class MenuFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val list = mutableListOf<CarouselItem>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class MenuFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
 
 
     }
@@ -78,10 +81,24 @@ class MenuFragment : Fragment() {
             }
     }
 
-    override fun onResume() {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val carousel: ImageCarousel = view.findViewById(R.id.carousel)
+
+        carousel.registerLifecycle(lifecycle)
+
+        list.add(CarouselItem("https://images.unsplash.com/photo-1558123567-01c8e1aca56f?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGNhbXBpbmd8ZW58MHwwfDB8fHww"))
+        list.add(CarouselItem("https://images.unsplash.com/photo-1464207687429-7505649dae38?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGNhbXBpbmd8ZW58MHwwfDB8fHww"))
+        list.add(CarouselItem("https://images.unsplash.com/photo-1609788063095-d71bf3c1f01f?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGNhbXBpbmd8ZW58MHwwfDB8fHww"))
+        list.add(CarouselItem("https://images.unsplash.com/photo-1625834509314-3b12c6153624?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhbXBpbmd8ZW58MHwwfDB8fHww"))
+        list.add(CarouselItem("https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNhbXBpbmd8ZW58MHwwfDB8fHww"))
+        carousel.setData(list)
+    }
+
+    /*override fun onResume() {
         super.onResume()
 
 
-    }
+    }*/
 
 }

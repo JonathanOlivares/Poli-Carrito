@@ -9,10 +9,7 @@
         android:id="@+id/categoriasFragment"
         android:icon="@drawable/ic_categorias_svg"
         android:title="Categorias" />
-    <item
-        android:id="@+id/startspeechrecognitionFragment"
-        android:icon="@drawable/ic_microphone_svg"
-        android:title="Micrófono"/>
+
     <item
         android:id="@+id/carritoFragment"
         android:icon="@drawable/ic_carrito_svg"

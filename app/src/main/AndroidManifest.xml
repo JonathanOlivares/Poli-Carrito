@@ -59,7 +59,7 @@
             android:name=".ProductosActivity"
             android:exported="false" />
         <activity
-            android:name=".SingupActivity"
+            android:name=".SignupActivity"
             android:exported="false" />
 
 

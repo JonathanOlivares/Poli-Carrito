@@ -110,7 +110,7 @@ class LoginActivity : AppCompatActivity() {
 
     /* - - - - - Agregado - Funciones Basicas - - - - - */
     private fun CanbioActivity_Singup() {
-        val win_singup = Intent( this, SingupActivity::class.java )
+        val win_singup = Intent( this, SignupActivity::class.java )
         startActivity( win_singup )
     }
 
