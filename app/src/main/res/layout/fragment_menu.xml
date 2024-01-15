@@ -77,7 +77,7 @@
                             app:infiniteCarousel="true"
                             app:showIndicator="false"
                             app:autoPlay="true"
-                            app:carouselType="BLOCK"
+                            app:carouselType="SHOWCASE"
                             app:showNavigationButtons="false"
                             app:autoPlayDelay="2000" />
 
